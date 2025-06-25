@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  database:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: ai_meetup
+      POSTGRES_PASSWORD: ai_meetup
+      POSTGRES_DB: ai_meetup
+    ports:
+      - "5432:5432"
