@@ -6,6 +6,9 @@ import java.util.UUID;
 import levi9.meetup.ai.product.model.Product;
 import org.springframework.jdbc.core.RowMapper;
 
+/**
+ * Maps a row from the result set to a {@link Product} object.
+ */
 public class ProductRowMapper implements RowMapper<Product> {
 
   @Override

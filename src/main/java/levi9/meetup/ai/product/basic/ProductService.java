@@ -1,9 +1,8 @@
-package levi9.meetup.ai.product.basic.service;
+package levi9.meetup.ai.product.basic;
 
 import java.util.List;
 import levi9.meetup.ai.product.dto.FilterRequestDto;
 import levi9.meetup.ai.product.model.Product;
-import levi9.meetup.ai.product.basic.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +16,4 @@ public class ProductService {
     return productRepository.findProductsByCategoryAndParams(filterRequest);
   }
 
-//  public List<Product> findFilteredProducts(UUID categoryId, Map<UUID, List<String>> params) {
-//    return productRepository.findProductsByCategoryAndParams(categoryId, params);
-//  }
 }

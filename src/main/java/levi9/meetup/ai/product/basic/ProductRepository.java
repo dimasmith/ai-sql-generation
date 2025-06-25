@@ -1,4 +1,4 @@
-package levi9.meetup.ai.product.basic.repository;
+package levi9.meetup.ai.product.basic;
 
 import java.util.List;
 import java.util.UUID;
@@ -30,6 +30,15 @@ public class ProductRepository {
 
   private final NamedParameterJdbcTemplate jdbcTemplate;
 
+  /**
+   * Finds products filtered by category and a list of product parameters.
+   * <p>
+   * Builds the SQL query dynamically by adding filtering conditions.
+   * </p>
+   *
+   * @param filterRequest DTO containing parameters to filter by
+   * @return a list of {@link Product} matching the specified filters
+   */
   public List<Product> findProductsByCategoryAndParams(FilterRequestDto filterRequest) {
     MapSqlParameterSource queryParams = new MapSqlParameterSource();
 
